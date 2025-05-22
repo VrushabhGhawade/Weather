@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   city = '';
-  weatherData: any;
+  weatherData: any; 
 
   constructor(private weatherService: WeatherService) {}
 
