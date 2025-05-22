@@ -1,1 +1,10 @@
-<p>weather-map works!</p>
+<mat-card *ngIf="weatherData">
+  <mat-card-title>{{ weatherData.name }}, {{ weatherData.sys.country }}</mat-card-title>
+  <mat-card-subtitle>{{ weatherData.weather[0].description  }}</mat-card-subtitle>
+
+  <mat-card-content>
+    <p><strong>🌡 Temperature:</strong> {{ weatherData.main.temp }}°C</p>
+    <p><strong>💧 Humidity:</strong> {{ weatherData.main.humidity }}%</p>
+    <p><strong>🌬 Wind:</strong> {{ weatherData.wind.speed }} m/s</p>
+  </mat-card-content>
+</mat-card>
